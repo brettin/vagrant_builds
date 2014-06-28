@@ -22,6 +22,3 @@ popd
 cp -r ./bin/* /usr/local/bin/
 cp -r ./lib/* /usr/local/lib/
 cp -r ./include/* /usr/local/include/
-
-
-
