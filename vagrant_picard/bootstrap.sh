@@ -14,7 +14,7 @@ pushd picard-tools-1.115
 
 for n in *.jar ; do 
   p=$(basename $n .jar) ; 
-  echo "/usr/bin/java -jar /usr/local/jars/picard-1.115/$n " > /usr/local/bin/$p.sh ;
+  echo "\"/usr/bin/java\" \"-jar\" \"/usr/local/jars/picard-1.115/$n\" \"\$@\"" > /usr/local/bin/$p.sh ;
   chmod a+rx /usr/local/bin/$p.sh ;
 done
 
