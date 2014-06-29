@@ -14,9 +14,24 @@ apt-get install -y libncurses5
 apt-get install -y dh-autoreconf
 apt-get install -y pkg-config
 
+# download samtools and place in the current working directory
+# because I'm on a plane, I can't do this right now.
 
-git clone https://github.com/gkno/gkno_launcher.git
-pushd gkno_launcher
-./gkno build
-popd
+git clone https://github.com/samtools/samtools.git
 
+
+# unpack
+# bunzip2 samtools-0.1.19.tar.bz2 
+# tar -xf samtools-0.1.19.tar 
+
+# compile the source
+cd samtools/
+git checkout master
+make
+make razip
+
+perl -e 'use File::Find; find(sub {print "cp $File::Find::dir/$_ /usr/local/bin/ \n" if -x and !-d and $File::Find::dir !~ /\.git/}, ".")' > cp.src
+source cp.src
+
+# deploy man page
+cp samtools.1 /usr/share/man/man1/
