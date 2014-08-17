@@ -18,4 +18,6 @@ make
 make install
 popd
 
-echo "export LD_LIBRARY_PATH=/usr/local/lib" >> .profile
+echo "export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH" >> .profile
+echo "MANPATH=/usr/local/share/man:$MANPATH" >> .profile
+echo "PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH" >> .profile
