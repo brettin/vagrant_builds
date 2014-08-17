@@ -9,7 +9,7 @@ apt-get install -y libncurses5
 apt-get install -y dh-autoreconf
 apt-get install -y pkg-config
 
-wget -q ftp://ftp.genome.umd.edu/pub/jellyfish/jellyfish-2.1.3.tar.gz
+wget -q -o wget.log ftp://ftp.genome.umd.edu/pub/jellyfish/jellyfish-2.1.3.tar.gz
 gunzip jellyfish-2.1.3.tar.gz
 tar -xvf jellyfish-2.1.3.tar 
 pushd jellyfish-2.1.3/
@@ -17,3 +17,5 @@ pushd jellyfish-2.1.3/
 make
 make install
 popd
+
+echo "export LD_LIBRARY_PATH=/usr/local/lib" >> .profile
