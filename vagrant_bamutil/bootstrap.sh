@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# set up for gnko
+# set up for bamutil 
 
 apt-get update
 apt-get install -y build-essential
