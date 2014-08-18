@@ -15,5 +15,6 @@ git clone --recursive git://github.com/ekg/freebayes.git
 
 pushd freebayes
 make
-make install
+# make install
+cp bin/freebayes bin/bamleftalign /usr/local/bin/
 popd
