@@ -2,6 +2,16 @@
 
 # set up for freebayes 
 
+# build script for bamtools
+
+target=${TARGET-/usr/local}
+
+if [[ $# -ne 0 ]] ; then
+        target=$1
+        shift
+fi
+
+
 apt-get update
 apt-get install -y build-essential
 apt-get install -y git
@@ -16,5 +26,6 @@ git clone --recursive git://github.com/ekg/freebayes.git
 pushd freebayes
 make
 # make install
-cp bin/freebayes bin/bamleftalign /usr/local/bin/
+mkdir -p $target/bin
+cp bin/freebayes bin/bamleftalign $target/bin/
 popd
