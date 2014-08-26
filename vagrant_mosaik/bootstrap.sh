@@ -2,6 +2,14 @@
 
 # set up for gnko
 
+target=${TARGET-/usr/local}
+
+if [[ $# -ne 0 ]] ; then
+        target=$1
+        shift
+fi
+
+
 apt-get update
 apt-get install -y build-essential
 apt-get install -y cmake
@@ -13,7 +21,7 @@ apt-get install -y pkg-config
 
 wget -q -o wget.log https://mosaik-aligner.googlecode.com/files/MOSAIK-2.2.3-Linux-x64.tar
 tar -xvf MOSAIK-2.2.3-Linux-x64.tar
-cp MOSAIK-2.2.3-Linux-x64/Mosaik* /usr/local/bin
+cp MOSAIK-2.2.3-Linux-x64/Mosaik* $target/bin
 
 # need bamtools to properly prepare bam files for traing neural net.
 # need to install Mosaik from source to get codes necessary for training
@@ -22,13 +30,13 @@ cp MOSAIK-2.2.3-Linux-x64/Mosaik* /usr/local/bin
 # copy the pre-built neural nets to usr/local/bin
 git clone https://github.com/wanpinglee/MOSAIK.git
 cd MOSAIK
-cp src/networkFile/*.ann /usr/local/bin
+cp src/networkFile/*.ann $target/bin
  
 # use this if we want to install the code to train a new neural net.
 # cd src/networkFile/retrainCode
 # make
-# cp attachXC/xc_pe attachXC/xc_se /usr/local/bin/
-# cp trainNetwork/train_mq /usr/local/bin/
+# cp attachXC/xc_pe attachXC/xc_se $target/bin/
+# cp trainNetwork/train_mq $target/bin/
 # 
 # cd ../../..
 
