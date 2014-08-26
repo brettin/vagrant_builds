@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-# set up for gnko
+# build script for bamtools
+
+target=${TARGET-/usr/local}
+
+if [[ $# -ne 0 ]] ; then
+        target=$1
+        shift
+fi
+
 
 apt-get update
 apt-get install -y build-essential
@@ -19,6 +27,11 @@ pushd build
 cmake ..
 make
 popd
-cp -r ./bin/* /usr/local/bin/
-cp -r ./lib/* /usr/local/lib/
-cp -r ./include/* /usr/local/include/
+
+mkdir -p $target/bin/
+mkdir -p $target/lib/
+mkdir -p $target/include/
+
+cp -r ./bin/* $target/bin/
+cp -r ./lib/* $target/lib/
+cp -r ./include/* $target/include/
