@@ -2,6 +2,14 @@
 
 # set up for bamutil 
 
+target=${TARGET-/usr/local}
+
+if [[ $# -ne 0 ]] ; then
+        target=$1
+        shift
+fi
+
+
 apt-get update
 apt-get install -y build-essential
 apt-get install -y git
@@ -16,4 +24,5 @@ git clone https://github.com/statgen/bamUtil.git
 pushd bamUtil
 make cloneLib
 make
-make install INSTALLDIR=/usr/local/bin
+mkdir -p $target/bin
+make install INSTALLDIR=$target/bin
