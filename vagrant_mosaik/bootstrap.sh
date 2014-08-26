@@ -23,20 +23,18 @@ wget -q -o wget.log https://mosaik-aligner.googlecode.com/files/MOSAIK-2.2.3-Lin
 tar -xvf MOSAIK-2.2.3-Linux-x64.tar
 cp MOSAIK-2.2.3-Linux-x64/Mosaik* $target/bin
 
-# need bamtools to properly prepare bam files for traing neural net.
-# need to install Mosaik from source to get codes necessary for training
-# neural net.
-
 # copy the pre-built neural nets to usr/local/bin
 git clone https://github.com/wanpinglee/MOSAIK.git
 cd MOSAIK
 cp src/networkFile/*.ann $target/bin
  
-# use this if we want to install the code to train a new neural net.
+# need bamtools to properly prepare bam files for traing neural net.
+# need to install Mosaik from source to get codes necessary for training
+# neural net.
+#
 # cd src/networkFile/retrainCode
 # make
 # cp attachXC/xc_pe attachXC/xc_se $target/bin/
-# cp trainNetwork/train_mq $target/bin/
-# 
+# cp trainNetwork/train_mq $target/bin/ 
 # cd ../../..
 
