@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
 
-# set up for java 
+# set up for snpeff 
+
+target=${TARGET-/usr/local}
+
+if [[ $# -ne 0 ]] ; then
+        target=$1
+        shift
+fi
+
+dst=$target/data
 
 apt-get update
 apt-get install -y openjdk-7-jdk
-#apt-get install -y ant
+apt-get install -y ant
 apt-get install unzip
 
 wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 
-cat > $dst <<EOF
+cat > $target <<EOF
 #---
 # Databases are stored here
 # E.g.: Information for 'hg19' is stored in data_dir/hg19/
@@ -19,7 +28,7 @@ cat > $dst <<EOF
 # Also, a non-absolute path will be relative to config's file dir
 # 
 #---
-data.dir = ./data/
+data.dir = $dst/data/
 EOF
 
 
