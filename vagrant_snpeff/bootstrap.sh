@@ -16,10 +16,18 @@ apt-get install -y openjdk-7-jdk
 apt-get install -y ant
 apt-get install unzip
 
+# general steps:
+# download latest
+# unzip latest
+# wrap jars and deploy as scripts?
+# configure location of database
+
+
 wget http://sourceforge.net/projects/snpeff/files/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 
-cat > $target <<EOF
+
+# cat > $target <<EOF
 #---
 # Databases are stored here
 # E.g.: Information for 'hg19' is stored in data_dir/hg19/
@@ -28,20 +36,20 @@ cat > $target <<EOF
 # Also, a non-absolute path will be relative to config's file dir
 # 
 #---
-data.dir = $dst/data/
-EOF
+# data.dir = $dst/data/
+# EOF
 
 
 
-for n in *.jar ; do 
-  p=$(basename $n .jar) ; 
-  echo "\"/usr/bin/java\" \"-jar\" \"/usr/local/jars/picard-1.115/$n\" \"\$@\"" > /usr/local/bin/$p.sh ;
-  chmod a+rx /usr/local/bin/$p.sh ;
-done
+# for n in *.jar ; do 
+#   p=$(basename $n .jar) ; 
+#   echo "\"/usr/bin/java\" \"-jar\" \"/usr/local/jars/picard-1.115/$n\" \"\$@\"" > /usr/local/bin/$p.sh ;
+#   chmod a+rx /usr/local/bin/$p.sh ;
+# done
 
 
-mkdir -p /usr/local/jars/picard-1.115
-chmod -R a+rx /usr/local/jars
+# mkdir -p /usr/local/jars/picard-1.115
+# chmod -R a+rx /usr/local/jars
 
-cp * /usr/local/jars/picard-1.115
-chmod a+r /usr/local/jars/picard-1.115/*
+# cp * /usr/local/jars/picard-1.115
+# chmod a+r /usr/local/jars/picard-1.115/*
