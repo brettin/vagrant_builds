@@ -1,0 +1,4 @@
+--mixed_genome_fasta /vagrant/mycobacterium.faa
+--working_directory /home/vagrant
+--project_name test_1
+--legacy_blast
