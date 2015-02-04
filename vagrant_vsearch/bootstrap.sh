@@ -29,6 +29,7 @@ make -f Makefile
 
 # make install
 mkdir -p $target/bin
-cp vsearch /usr/local/bin/
+cp vsearch /$target/bin/
+
 popd
 popd
