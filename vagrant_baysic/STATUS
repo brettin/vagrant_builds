@@ -9,3 +9,7 @@ It’s available in bitbucket. The installation instructions are basically OK.
 It requires R, and getting the correct versions of the R packages and related dependencies made the install take some time.
 It comes with a test, the test seems reasonable, and it passes.
 At this point, testing against some real data would be interesting.
+
+Platforms Tested:
+	1.  hashicorp/precise64
+	2.  Linux golgi 3.8.0-29-generic #42~precise1-Ubuntu
