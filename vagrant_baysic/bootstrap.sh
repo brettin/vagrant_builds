@@ -62,8 +62,9 @@ R CMD INSTALL reshape2_1.2.tar.gz
 
 
 git clone https://bitbucket.org/jtr4v/baysic.git
-cd baysic
+pushd baysic
 ./run_tests.sh
+popd
 
 mkdir -p $target/bin
 mv baysic $target/ 
