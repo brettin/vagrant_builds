@@ -18,11 +18,7 @@ apt-get install -y pkg-config
 # because I'm on a plane, I can't do this right now.
 
 git clone https://github.com/samtools/samtools.git
-
-
-# unpack
-# bunzip2 samtools-0.1.19.tar.bz2 
-# tar -xf samtools-0.1.19.tar 
+git clone https://github.com/samtools/htslib.git
 
 # compile the source
 cd samtools/
