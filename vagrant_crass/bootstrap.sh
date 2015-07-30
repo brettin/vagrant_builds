@@ -49,3 +49,4 @@ pushd crAss_v2.1
 mkdir -p $target/bin
 cp crAss.pl $target/bin
 chmod a+rx $target/bin/crAss.pl
+popd
