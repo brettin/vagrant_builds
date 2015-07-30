@@ -1,15 +1,2 @@
-tests passing July 8, 2015
-
-BAYSIC: a Bayesian method for combining sets of genome variants with improved specificity and sensitivity
-
-Some observations:
-
-It comes with a not so permissive license. Free for academic use only. The authors have a financial interest in Genformatic.
-It’s available in bitbucket. The installation instructions are basically OK.
-It requires R, and getting the correct versions of the R packages and related dependencies made the install take some time.
-It comes with a test, the test seems reasonable, and it passes.
-At this point, testing against some real data would be interesting.
-
-Platforms Tested:
-	1.  hashicorp/precise64
-	2.  Linux golgi 3.8.0-29-generic #42~precise1-Ubuntu
+July 30, 2015	build working on hashicorp/percise64
+July 30, 2015	build working on #42~precise1-Ubuntu
