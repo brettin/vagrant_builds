@@ -17,6 +17,8 @@ apt-get install -y libncurses5
 apt-get install -y dh-autoreconf
 apt-get install -y pkg-config
 
+# had to do this on a system where openmpi was already installed
+apt-get --purge remove openmpi-bin openmpi-doc libopenmpi-dev fftw2 fftw-dev
 apt-get install -y mpich2
 apt-get install -y libmpich2-dev
 
