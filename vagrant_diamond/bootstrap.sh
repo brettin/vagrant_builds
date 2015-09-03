@@ -18,7 +18,7 @@ apt-get install -y libncurses5-dev
 apt-get install -y libncurses5
 apt-get install -y dh-autoreconf
 apt-get install -y pkg-config
-apt-get install libboost-all-dev
+apt-get install -y libboost-all-dev
 
 mkdir -p $target/bin/
 
