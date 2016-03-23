@@ -36,5 +36,5 @@ make
 
 
 mkdir -p $target/bin
-cp * $target/bin
+cp -i ./bin/* $target/bin
 
