@@ -23,9 +23,11 @@ apt-get install -y libpng-dev
 apt-get install -y zlib1g-dev
 apt-get install -y libfreetype6-dev
 
+mkdir -p $target/bin
+mkdir -p $target/lib
 
 git clone https://github.com/arq5x/poretools
 cd poretools
-python setup.py install
+python setup.py install --prefix $target
 
 
