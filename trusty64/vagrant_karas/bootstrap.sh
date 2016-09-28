@@ -17,7 +17,7 @@ apt-get install -y pkg-config
 
 apt-get install -y python-numpy 
 apt-get install -y python-scipy
-aot-get install -y python-dev
+apt-get install -y python-dev
 apt-get install -y python-pip
 apt-get install -y python-nose
 apt-get install -y g++
