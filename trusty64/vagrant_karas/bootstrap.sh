@@ -28,6 +28,7 @@ pip install Theano
 pip install pandas
 pip install matplotlib
 pip install sklearn # not absolutely required
+pip install -U imbalanced-learn
 
 # python -c "import numpy; numpy.test()"
 # python -c "import scipy; scipy.test()"
