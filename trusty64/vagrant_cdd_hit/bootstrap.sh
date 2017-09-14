@@ -16,7 +16,7 @@ apt-get install -y libx11-dev
 wget https://github.com/weizhongli/cdhit/releases/download/V4.6.8/cd-hit-v4.6.8-2017-0621-source.tar.gz
 tar -xvzf cd-hit-v4.6.8-2017-0621-source.tar.gz 
 
-mkdir -p $target/lib
+mkdir -p $target/bin
 
 cd cd-hit-v4.6.8-2017-0621
 
