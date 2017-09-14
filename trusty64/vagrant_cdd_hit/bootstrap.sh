@@ -7,8 +7,6 @@ if [[ $# -ne 0 ]] ; then
         shift
 fi
 
-target=/usr/local/cdd-hit
-
 apt-get update
 apt-get install -y build-essential
 apt-get install -y libx11-dev
