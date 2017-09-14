@@ -14,6 +14,10 @@ apt-get install -y libx11-dev
 wget ftp://emboss.open-bio.org/pub/EMBOSS/EMBOSS-6.6.0.tar.gz
 tar -xvzf EMBOSS-6.6.0.tar.gz 
 
+mkdir -p $target
+mkdir -p $target/bin
+mkdir -p $target/lib
+
 cd EMBOSS-6.6.0
 
 ./configure --prefix=$target
