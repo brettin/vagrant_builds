@@ -18,7 +18,7 @@ mkdir -p $target/bin
 
 cd cd-hit-v4.6.8-2017-0621
 
-make PREFIX=$target
+make
 make PREFIX=$target/bin install
 
 cd cd-hit-auxtools
