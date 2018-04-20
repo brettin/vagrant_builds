@@ -24,6 +24,7 @@ pip install scipy
 apt-get install libbz2-dev
 apt-get install -y lzma
 apt-get install -y liblzma-dev
+apt-get install -y libtbb-dev
 
 git clone https://github.com/samtools/htslib.git
 wget https://sourceforge.net/projects/samtools/files/samtools/0.1.18/samtools-0.1.18.tar.bz2
