@@ -20,6 +20,10 @@ apt-get install -y gfortran
 pip install numpy
 pip install scipy
 
+# Added these on Apr. 21, 2018
+apt-get install libbz2-dev
+apt-get install -y lzma
+apt-get install -y liblzma-dev
 
 git clone https://github.com/samtools/htslib.git
 wget https://sourceforge.net/projects/samtools/files/samtools/0.1.18/samtools-0.1.18.tar.bz2
