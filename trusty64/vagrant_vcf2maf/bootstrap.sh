@@ -45,3 +45,10 @@ export PATH="$PERL_BASE/perl-5.22.2/bin:$PATH"
 
 # You can add those 2 lines to the end of your `~/.bashrc` to make it persistent.
 # But be sure to define `$PERL_BASE` in your `~/.bashrc` too.
+
+wget https://github.com/Ensembl/ensembl-vep/archive/release/92.1.tar.gz
+tar -xvzf 92.1.tar.gz
+cd ensembl-vep-release-92.1/
+which perl
+which cpanm
+perl INSTALL.pl
