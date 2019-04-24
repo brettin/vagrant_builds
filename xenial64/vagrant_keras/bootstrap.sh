@@ -16,4 +16,5 @@ apt-get install -y pkg-config
 
 
 wget https://repo.anaconda.com/archive/Anaconda3-2019.03-MacOSX-x86_64.sh
+chmod u+x Anaconda3-2019.03-MacOSX-x86_64.sh
 
