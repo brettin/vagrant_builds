@@ -29,3 +29,22 @@ cat >> /root/.bashrc << END
 # add for anaconda install
 PATH=/opt/anaconda/bin:\$PATH
 END
+
+export PATH=$PATH:/opt/anaconda/bin
+
+conda create -n candle -y python=3.7
+source activate candle
+# Install additonal modules not shipped with Anaconda
+conda install -y -c conda-forge tensorflow
+conda install -y -c anaconda hdf5=1.8.17
+conda install -y -c anaconda theano
+conda install -y -c conda-forge keras=2
+conda install -y -c anaconda pandas
+conda install -y -c anaconda scikit-learn 
+conda install -y -c anaconda matplotlib
+conda install -y -c conda-forge pygpu
+conda install -y -c conda-forge tqdm
+
+# Download the source files for the benchmarks
+git clone https://github.com/ECP-Candle/benchmarks
+
