@@ -15,6 +15,17 @@ apt-get install -y dh-autoreconf
 apt-get install -y pkg-config
 
 
-wget https://repo.anaconda.com/archive/Anaconda3-2019.03-Linux-x86_64.sh
-chmod u+x Anaconda3-2019.03-Linux-x86_64.sh
+miniconda=Miniconda3-latest-Linux-x86_64.sh
+wget http://repo.continuum.io/miniconda/$miniconda
+chmod +x $miniconda
+./$miniconda -b -p /opt/anaconda
 
+cat >> /home/vagrant/.bashrc << END
+# add for anaconda install
+PATH=/opt/anaconda/bin:\$PATH
+END
+
+cat >> /root/.bashrc << END
+# add for anaconda install
+PATH=/opt/anaconda/bin:\$PATH
+END
